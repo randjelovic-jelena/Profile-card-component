@@ -1,0 +1,176 @@
+/*Kumbh Sans Display Google Font*/
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root{
+
+  /*colors*/
+  --color-dark-grayish-blue:hsl(227, 10%, 46%);
+  --color-very-dark-desaturated-blue:hsl(229, 23%, 23%);
+  --color-dark-cyan:hsl(185, 75%, 39%);
+  --color-dark-gray:hsl(0,0%,59%);
+  --col-white:rgba(255,255,255,1);
+
+}
+*{
+	padding:0;
+	margin:0;
+	box-sizing:border-box;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+hr{
+  background-color: rgba(0,0,0,0.1);
+  opacity: 0.5;
+  margin-bottom: 25px;
+}
+
+/*BACKGROUND*/
+.card-background{
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-dark-cyan);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
+  background-position: bottom 552px left 0%, top 552px right 0%;
+  background-repeat: no-repeat,no-repeat;
+  background-size: 55vw auto, 55vw auto;
+  background-attachment: fixed;
+}
+/*CARD, MAIN CONTAINER*/
+#container{
+  margin: 10% auto;
+  width: 355px;
+  background-color: var(--col-white);
+  border-radius: 20px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 1px 2px 19px rgb(0 0 0 / 20%);
+}
+
+/*----------------------------
+---------CARH HEADER----------
+-----------------------------*/
+.card-header{
+  height: 165px;
+  width: 100%;
+  background-image: url('../images/bg-pattern-card.svg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+/*IMAGE*/
+.card-img{
+  position: absolute;
+  height: 110px;
+  width: 110px;
+  background-image: url(../images/image-victor.jpg);
+  background-position: center;
+  border-radius: 100%;
+  border: 5px solid var(--col-white);
+  top: 107px;
+  left: 50%;
+  margin-left: -50px;
+  background-size: contain;
+}
+
+/*----------------------------
+----------CARD INFO-----------
+-----------------------------*/
+.user-name{
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 77px;
+  color: var(--color-very-dark-desaturated-blue);
+}
+.user-name span{
+  font-weight: 400;
+  color: var(--color-dark-grayish-blue);
+  margin-left: 7px;
+}
+.user-city{
+  text-align: center;
+  font-size: 15px;
+  margin-top: 9px;
+  color: var(--color-dark-gray);
+  margin-bottom: 30px;
+}
+
+/*SOCIAL MEDIA*/
+.card-content{
+  display: flex;
+  width: 80%;
+  margin: 10px auto 30px auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.card-content div{
+  width:33%;
+}
+.card-content-number{
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-very-dark-desaturated-blue);
+}
+.card-content-type{
+  font-size: 12px;
+  text-align: center;
+  color: var(--color-dark-grayish-blue);
+  letter-spacing: 1.1px;
+  margin-top: 5px;
+}
+
+/*----------------------------
+------------MEDIA-------------
+-----------------------------*/
+@media (max-width:1125px){
+  .card-background{
+    background-position: bottom 652px left -10%, top 552px right -10%;
+    background-size: 65vw auto, 65vw auto;
+  }
+}
+@media (max-width:770px){
+  .card-background{
+    background-position: bottom 620px left -73%, top 620px right -111%;
+    background-size: 75vw auto, 82vw auto;
+  }
+}
+@media (max-width:450px){
+  .card-background{
+    background-position: bottom 640px left -100%, top 620px right -111%;
+    background-size: 80vw auto, 85vw auto;
+  }
+  .card-content-number{
+    font-size: 17px;
+  }
+  #container{
+    width: 90%;
+  }
+}
+@media(max-width:376px) and (max-height:667px){
+  .card-background{
+    background-position: bottom 471px left -100%, top 476px right -111%;
+    background-size: 85vw auto, 85vw auto; 
+
+  }
+}
+@media(max-width:376px) and (min-height:680px){
+  .card-background{
+    background-position: bottom 558px left -100%, top 559px right -111%;
+    background-size: 80vw auto, 85vw auto;
+  }
+}
+@media (min-height:1100px){
+  .card-background{
+    background-position: bottom 735px left 0%, top 735px right 0%;
+  }
+}@media (height:600px) and (width:1024px){
+  .card-background{
+    background-position: bottom 238px left -59%, top 305px right -41%;
+    background-size: 63vw auto, 63vw auto;
+  }
+}
